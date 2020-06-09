@@ -1,0 +1,9 @@
+D:\3\БД\3\3\bin\Debug\3.dacpac
+D:\3\БД\3\3\bin\Debug\_3.dll
+D:\3\БД\3\3\bin\Debug\_3.pdb
+D:\3\БД\3\3\obj\Debug\_3.dll
+D:\3\БД\3\3\obj\Debug\_3.pdb
+D:\3\БД\3\3\obj\Debug\Model.xml
+D:\3\БД\3\3\obj\Debug\refactor.xml
+D:\3\БД\3\3\obj\Debug\postdeploy.sql
+D:\3\БД\3\3\obj\Debug\predeploy.sql

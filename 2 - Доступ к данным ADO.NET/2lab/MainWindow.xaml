@@ -1,0 +1,142 @@
+﻿<Window x:Class="_2lab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2lab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Клиенты">
+                <Grid>
+                    <!--Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="766*"/>
+                    </-->
+
+                    <Label x:Name="labelIdClient" Content="ID клиента" Margin="23,10,665,338" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxIdClient" HorizontalAlignment="Left" Height="31" Margin="97,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelNameClient" Content="ФИО" Margin="23,55,673,296" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxNameClient" HorizontalAlignment="Left" Height="31" Margin="97,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelCityClient" Content="Город" Margin="23,103,679,253" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxCityClient" HorizontalAlignment="Left" Height="32" Margin="97,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <DataGrid x:Name="usersGrid" HorizontalAlignment="Left" Height="214" Margin="-4,177,-6,-3" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="addClient" Content="Добавить" Margin="333,10,324,338" Click="addClient_Click" Grid.Column="1"></Button>
+                    <Button x:Name="dropClient" Content="Удалить Клиента" Margin="333,55,324,290" Click="dropClient_Click" Grid.Column="1"></Button>
+                    <Button x:Name="changeClient" Content="Изменить" Margin="333,103,324,242" Click="changeClient_Click" Grid.Column="1"></Button>
+                    <Button x:Name="allClients" Content="Все клиенты" Margin="491,55,166,296" Click="allClients_Click" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Продукты">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="176*"/>
+                        <ColumnDefinition Width="607*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="labelIdProduct" Content="ID продукта" Margin="31,14,62,335"/>
+                    <TextBox x:Name="textBoxIdProduct" HorizontalAlignment="Left" Height="39" Margin="114,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177" Grid.ColumnSpan="2"/>
+
+                    <Label x:Name="labelProductName" Content="Название" Margin="31,66,62,283"/>
+                    <TextBox x:Name="textBoxProductName" HorizontalAlignment="Left" Height="39" Margin="114,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177" Grid.ColumnSpan="2"/>
+
+                    <Label x:Name="labelProductCount" Content="Количество" Margin="31,112,62,236"/>
+                    <TextBox x:Name="textBoxProductCount" HorizontalAlignment="Left" Height="40" Margin="114,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177" Grid.ColumnSpan="2"/>
+
+                    <DataGrid x:Name="ProductsGrid" HorizontalAlignment="Left" Height="214" Margin="-4,177,-6,-3" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="addProduct" Content="Добавить" Margin="174,14,324,335" Click="addProduct_Click" Grid.Column="1"></Button>
+                    <Button x:Name="dropProduct" Content="Удалить продукт" Margin="174,66,324,284" Click="dropProduct_Click" Grid.Column="1"></Button>
+                    <Button x:Name="changeProduct" Content="Изменить" Margin="174,112,324,236" Click="changeProduct_Click" Grid.Column="1"></Button>
+                    <Button x:Name="allProducts" Content="Все продукты" Margin="332,66,166,283" Click="allProducts_Click" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Заказы">
+                <Grid>
+                    <Label x:Name="labelIDOrder_order" Content="ID заказа" Margin="40,0,646,352"/>
+                    <TextBox x:Name="textBoxIdOrder_order" HorizontalAlignment="Left" Height="23" Margin="136,4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+
+                    <Label x:Name="labelIdDiler_order" Content="ID поставщика" Margin="40,27,646,325"/>
+                    <TextBox x:Name="textBoxIdDiler_order" HorizontalAlignment="Left" Height="23" Margin="136,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+
+                    <Label x:Name="labeldClient_order" Content="ID клиента" Margin="40,55,651,296"/>
+                    <TextBox x:Name="textBoxIdClient_order" HorizontalAlignment="Left" Height="23" Margin="136,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+
+                    <Label x:Name="labelIdProduct_order" Content="ID продукта" Margin="40,84,665,271"/>
+                    <TextBox x:Name="textBoxIdProduct_order" HorizontalAlignment="Left" Height="23" Margin="136,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+
+                    <Label x:Name="labelProductCount_order" Content="Количество" Margin="40,117,651,234"/>
+                    <TextBox x:Name="textBoxProductCount_order" HorizontalAlignment="Left" Height="23" Margin="136,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+
+                    <Label x:Name="labelDateOrder" Content="Дата заказа" Margin="40,145,646,199"/>
+                    <DatePicker x:Name="DateOrder" Margin="136,145,491,204"></DatePicker>
+
+                    <DataGrid x:Name="ordersGrid" HorizontalAlignment="Left" Height="202" Margin="-4,189,-6,-3" VerticalAlignment="Top" Width="792"/>
+
+                    <Button x:Name="addOrder" Content="Добавить" Margin="349,10,324,335" Click="addOrder_Click"></Button>
+                    <Button x:Name="dropOrder" Content="Удалить Заказ" Margin="349,66,324,276" Click="dropOrder_Click"></Button>
+                    <Button x:Name="changeOrder" Content="Изменить" Margin="349,127,324,217" Click="changeOrder_Click"></Button>
+                    <Button x:Name="allOrders" Content="Все заказы" Margin="562,0,74,351" Click="allOrders_Click"  ></Button>
+
+
+
+                    <Label x:Name="labelDateStart" Content="Дата начала" Margin="482,42,175,296"/>
+                    <DatePicker x:Name="DateStart" Margin="562,42,65,304"></DatePicker>
+
+                    <Label x:Name="labelDateEnd" Content="Дата конца" Margin="482,71,175,268"/>
+                    <DatePicker x:Name="DateEnd" Margin="562,75,65,276"></DatePicker>
+                    <Button x:Name="spisok_orders" Content="Список заказов по дате" Margin="571,144,65,199" Click="spisokOrders_Click"  ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Поставки">
+                <Grid>
+                    <Label x:Name="labelIdSupply" Content="ID поставки" Margin="40,10,642,341"/>
+                    <TextBox x:Name="textBoxIdSupply" HorizontalAlignment="Left" Height="23" Margin="145,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
+
+                    <Label x:Name="labelIdDiler_supply" Content="ID поставщика" Margin="40,47,642,302"/>
+                    <TextBox x:Name="textBoxIdDiler_supply" HorizontalAlignment="Left" Height="23" Margin="145,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
+
+                    <Label x:Name="labelIdProduct_supply" Content="ID продукта" Margin="40,86,637,263"/>
+                    <TextBox x:Name="textBoxIdProduct_supply" HorizontalAlignment="Left" Height="23" Margin="145,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
+
+                    <Label x:Name="labelSupplyCount" Content="Количество" Margin="40,125,637,226"/>
+                    <TextBox x:Name="textBoxSupplyCount" HorizontalAlignment="Left" Height="23" Margin="145,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
+
+                    <DataGrid x:Name="supplyGrid" HorizontalAlignment="Left" Height="214" Margin="-4,177,0,0" VerticalAlignment="Top" Width="792"/>
+                    <Button x:Name="addSupply" Content="Добавить" Margin="349,10,324,335" Click="addSupply_Click"></Button>
+                    <Button x:Name="dropSupply" Content="Удалить поставку" Margin="349,66,324,279" Click="dropSupply_Click"></Button>
+                    <Button x:Name="changeSupply" Content="Изменить" Margin="349,122,324,226" Click="changeSupply_Click"></Button>
+
+                    <Button x:Name="allSupplies" Content="Все поставки" Margin="507,66,166,279" Click="allSupplies_Click"   ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Поставщики">
+                <Grid>
+                    <Label x:Name="labelIdDiler" Content="ID поставщика" Margin="10,27,673,320"/>
+                    <TextBox x:Name="textBoxIdDiler" HorizontalAlignment="Left" Height="23" Margin="99,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+
+                    <Label x:Name="labelNameDiler" Content="ФИО" Margin="10,55,683,284"/>
+                    <TextBox x:Name="textBoxNameDiler" HorizontalAlignment="Left" Height="23" Margin="99,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+
+                    <Label x:Name="labelCityDiler" Content="Город" Margin="10,83,683,263"/>
+                    <TextBox x:Name="textBoxCityDiler" HorizontalAlignment="Left" Height="23" Margin="99,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+
+                    <Label x:Name="labelPhoneDiler" Content="Телефон" Margin="10,109,683,238"/>
+                    <TextBox x:Name="textBoxPhoneDiler" HorizontalAlignment="Left" Height="23" Margin="99,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+
+                    <DataGrid x:Name="dilerGrid" HorizontalAlignment="Left" Height="214" Margin="-4,177,0,0" VerticalAlignment="Top" Width="792"/>
+                    <Button x:Name="addDiler" Content="Добавить" Margin="349,27,311,320" Click="addDiler_Click"></Button>
+                    <Button x:Name="dropDiler" Content="Удалить поставщика" Margin="349,73,311,269" Click="dropDiler_Click"></Button>
+                    <Button x:Name="changeDiler" Content="Изменить" Margin="349,124,311,216" Click="changeDiler_Click"></Button>
+
+                    <Button x:Name="allDilers" Content="Все поставщики" Margin="508,76,165,269" Click="allDilers_Click"   ></Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
